@@ -1,0 +1,255 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+}
+
+.app-container {
+  max-width: none;
+  margin: 0;
+  padding: 40px;
+  background: white;
+  border-radius: 0;
+  box-shadow: none;
+  color: #2c3e50;
+  border: none;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-container h1 {
+  text-align: left;
+  margin: 0 0 28px 0;
+  padding: 0;
+  font-size: 36px;
+  font-weight: 700;
+  text-shadow: none;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -0.5px;
+}
+
+.form-container {
+  display: flex;
+  gap: 12px;
+  margin: 0;
+  margin-bottom: 32px;
+  padding: 0;
+  border-bottom: none;
+  flex-wrap: wrap;
+  background: transparent;
+}
+
+.input-task {
+  flex: 1;
+  min-width: 250px;
+  padding: 14px 18px;
+  border: 2px solid #ecf0f1;
+  border-radius: 10px;
+  font-size: 16px;
+  background: white;
+  color: #2c3e50;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.input-task::placeholder {
+  color: #bdc3c7;
+}
+
+.input-task:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+  background: #f8fafc;
+}
+
+.btn-add {
+  padding: 14px 32px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.btn-add:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
+}
+
+.btn-add:active {
+  transform: translateY(-1px);
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.task-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.task-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.task-list::-webkit-scrollbar-thumb {
+  background: #e0e0e0;
+  border-radius: 4px;
+}
+
+.task-list::-webkit-scrollbar-thumb:hover {
+  background: #bdc3c7;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 24px;
+  margin: 0;
+  background: #f8fafc;
+  border: 2px solid #ecf0f1;
+  border-left: 4px solid transparent;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+}
+
+.task-item:hover {
+  background: white;
+  border-color: #667eea;
+  border-left-color: #667eea;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transform: translateX(4px);
+}
+
+.task-text {
+  flex: 1;
+  font-size: 16px;
+  word-break: break-word;
+  line-height: 1.5;
+  color: #2c3e50;
+}
+
+.btn-remove {
+  padding: 8px 16px;
+  background: transparent;
+  color: #e74c3c;
+  border: 2px solid #eccccc;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  margin-left: 16px;
+  font-weight: 600;
+}
+
+.btn-remove:hover {
+  background: #fadbd8;
+  color: #c0392b;
+  border-color: #e74c3c;
+  box-shadow: 0 3px 10px rgba(231, 76, 60, 0.25);
+}
+
+.btn-remove:active {
+  transform: scale(0.95);
+}
+
+.empty-message {
+  padding: 80px 36px;
+  font-size: 18px;
+  color: #95a5a6;
+  font-style: italic;
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media (max-width: 768px) {
+  .app-container {
+    padding: 24px;
+    min-height: 100vh;
+  }
+
+  .app-container h1 {
+    font-size: 28px;
+    margin-bottom: 24px;
+  }
+
+  .form-container {
+    margin-bottom: 24px;
+    gap: 10px;
+  }
+
+  .input-task {
+    min-width: 150px;
+    padding: 12px 14px;
+    font-size: 14px;
+    border-radius: 8px;
+  }
+
+  .btn-add {
+    padding: 12px 24px;
+    font-size: 14px;
+    border-radius: 8px;
+  }
+
+  .task-item {
+    padding: 14px 16px;
+    border-radius: 8px;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .task-text {
+    flex: 1 1 100%;
+    font-size: 14px;
+  }
+
+  .btn-remove {
+    padding: 6px 12px;
+    font-size: 12px;
+    margin-left: 0;
+    flex: 1 1 auto;
+    min-width: 80px;
+  }
+
+  .task-list {
+    gap: 10px;
+  }
+
+  .empty-message {
+    padding: 60px 24px;
+    font-size: 16px;
+  }
+}
