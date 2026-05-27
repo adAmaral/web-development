@@ -1,0 +1,50 @@
+:root {
+  --text: #504f5c;
+  --text-h: #25283d;
+  --muted: #7d7f8b;
+  --bg: #ffffff;
+  --border: #e6e8ee;
+  --accent: #6b26d9;
+  --accent-soft: #ede9fe;
+  --info: #0ea5e9;
+  --warning: #f59e0b;
+  --success: #1fa971;
+  --danger: #d8344f;
+  --shadow: 0 24px 70px rgba(37, 40, 61, 0.12);
+  --sans:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    sans-serif;
+
+  font-family: var(--sans);
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+button,
+input,
+textarea {
+  letter-spacing: 0;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
