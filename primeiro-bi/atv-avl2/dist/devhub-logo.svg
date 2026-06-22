@@ -1,0 +1,14 @@
+<svg width="256" height="72" viewBox="0 0 256 72" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="devhub-logo-title">
+  <title id="devhub-logo-title">DevHub</title>
+  <defs>
+    <linearGradient id="devhub-logo-gradient" x1="4" y1="60" x2="64" y2="12" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7C2DFF"/>
+      <stop offset="1" stop-color="#009DFF"/>
+    </linearGradient>
+  </defs>
+  <rect x="7" y="9" width="54" height="54" rx="13" stroke="url(#devhub-logo-gradient)" stroke-width="6"/>
+  <path d="M28 27L20 36L28 45" stroke="url(#devhub-logo-gradient)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M40 27L48 36L40 45" stroke="url(#devhub-logo-gradient)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M37 22L31 50" stroke="#2F23D9" stroke-width="6" stroke-linecap="round"/>
+  <text x="78" y="47" fill="#27108A" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="38" font-weight="800">DevHub</text>
+</svg>
