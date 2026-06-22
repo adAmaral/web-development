@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "npm rebuild --update-binary || true && vite build",
     "postinstall": "node ./scripts/postinstall.js",
     "lint": "eslint .",
     "preview": "vite preview"
